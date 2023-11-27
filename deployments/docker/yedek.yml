@@ -1,0 +1,24 @@
+podman-compose up -d
+
+podman machine stop
+podman machine rm
+podman machine init
+
+podman exec docker_kafka-1_1 kafka-topics --create --bootstrap-server localhost:29092 --replication-factor 1 --partitions 1 --topic client-event-topic
+podman exec --interactive --tty docker_kafka-1_1 kafka-console-producer --broker-list localhost:29092 --topic client-event-topic
+podman exec --interactive --tty docker_kafka-1_1 kafka-console-consumer --bootstrap-server localhost:29092 --topic client-event-topic --from-beginning
+
+open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security --allow-insecure-localhost
+
+http-server -a localhost -p 8000 -c-1
+
+brew services start mysql (brew services stop mysql)
+mysql -u root -p
+mysql> create database testDB
+
+
+zookeeper-server-start (zookeeper-server-stop)
+kafka-server-start (kafka-server-stop)
+kafka-console-consumer --bootstrap-server localhost:9092 --topic client-event-topic --from-beginning
+kafka-console-producer --bootstrap-server localhost:9092 --topic client-event-topic
+

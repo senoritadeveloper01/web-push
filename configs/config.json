@@ -1,0 +1,21 @@
+{
+  "mysql": {
+    "connectionUrl": "root@tcp(127.0.0.1:3306)/testDB"
+  },
+  "kafka": {
+    "servers": "127.0.0.1:9092",
+    "topic": "client-event-topic",
+    "id": "zimbra-event-client",
+    "groupId": "client-event-group-id",
+    "sessionTimeoutMs": 10000,
+    "defaultApiTimeoutMs": 60000,
+    "requestTimeoutMs": 30000,
+    "reconnectBackoffMaxMs": 1000,
+    "reconnectBackoffMs": 50,
+    "retryBackoffMs": 100
+  },
+  "firebase": {
+    "configFilePath": "/Users/senoritadev/dev/go-workspace/web-push/configs/firebase-service-account.json",
+    "logoUrl": "YOUR_LOGO_URL"
+  }
+}
