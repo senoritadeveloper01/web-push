@@ -61,7 +61,7 @@ curl -L 'http://localhost:8080/api/users/create' \
 
 ## Screenshots
 
-![ScreenShot](https://raw.github.com/senoritadeveloper01/web-push/master/screenshots/web-push-screenshots.png)
+![ScreenShot](https://raw.github.com/senoritadeveloper01/web-push/master/screenshots/web-push-screenshot.png)
 
 ## Authors / Contributors / Credits
 
